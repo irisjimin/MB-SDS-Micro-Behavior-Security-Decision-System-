@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from 'react'
-import { useInteractionTracker } from './tracking/useInteractionTracker'
+import { useInteractionTracker } from './useInteractionTracker'
 
 const scenario = {
   id: 'phishing-01',
