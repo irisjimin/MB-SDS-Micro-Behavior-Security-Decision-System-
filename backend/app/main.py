@@ -1,5 +1,3 @@
-from ml_model import predict_risk
-from features import extract_features
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from .schemas import EventIn
