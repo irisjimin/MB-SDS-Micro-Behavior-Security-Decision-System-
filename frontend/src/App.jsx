@@ -12,15 +12,15 @@ export default function App() {
   const [sessionId] = useState(() => `s-${Math.random().toString(36).slice(2, 10)}`)
   const tracker = useInteractionTracker(sessionId, scenario.id)
 
-  useEffect(() => {
-    tracker.trackView()
-  }, [])
+  // useEffect(() => {
+  //  tracker.trackView()
+  // }, [])
 
-  const summary = useMemo(() => tracker.getSummary(), [decision, tracker])
+  const summary = tracker.getSummary()
 
-  const decide = async (choice) => {
+  const decide = (choice) => {
     setDecision(choice)
-    await tracker.trackDecision(choice)
+    tracker.trackDecision(choice)
   }
 
   return (

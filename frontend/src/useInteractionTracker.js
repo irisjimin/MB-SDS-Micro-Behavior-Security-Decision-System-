@@ -1,6 +1,6 @@
 import { useRef } from 'react'
 
-const API_BASE = 'http://localhost:8000'
+const API_BASE = 'http://127.0.0.1:8000'
 
 export function useInteractionTracker(sessionId, scenarioId) {
   const data = useRef({
